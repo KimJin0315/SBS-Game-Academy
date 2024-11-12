@@ -1,1 +1,1 @@
-# SBS-GameArcademy
+# SBS-GameAcademy
