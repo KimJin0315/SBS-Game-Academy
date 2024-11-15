@@ -2,85 +2,81 @@
 
 void main()
 {
-#pragma region 오버플로우
-	// 특정한 자료형이 표현할 수 있는 최댓값의 범위를
-	// 넘어서 연산을 수행하는 과정입니다.
-	// char는 -128~127까지 나타낼 수 있음
+#pragma region 변수
+	// 데이터를 저장할 수 있는 메모리 공간을 생성하는 것입니다.
 
-	// char character = 129; // <-
-	// 
-	// printf("chracter 변수의 값 : %d\n", character);
+#pragma region 자료형
+	// 데이터를 저장하기 위해 데이터의 행태를 정해주는 것입니다.
 
-	// 오버플로우는 부호 없는 자료형에서도 똑같이 발생하며,
-	// 실수일 때, 오버플로우가 발생하면 infiniy라는 값이 출력됩니다.
+	//char alphabet = 'A';
+	//int integer = 100;
+	//float decimal = 15.5f;
+	//
+	//alphabet = 'B';
+	//integer = 95;
+	//decimal = 7.85f;
+
+	// 자료형은 각각의 자료형마다 크기가 정해져 있으며, 자료형의
+	// 크기는 바이트 단위로 이루어져 있고, 자료형의 경우 자료형에
+	// 따라 저장할 수 있는 값의 종류와 범위가 결정됩니다.
 #pragma endregion
 
-#pragma region 언더플로우
-	// 특정한 자료형이 표현할 수 있는 최솟값의 범위
-	// 를 넘어서 연산을 수행하는 과정입니다.
+#pragma region 서식 지정자
+	// 출력하기 위한 자료형의 정보를 명시적으로 지정해주는 것입니다.
 
-	// char alphabet = -130;
-	// 
-	// printf("alphabet 변수의 값 : %d\n", alphabet);
-
-	// 언더플로우는 부호 없는 자료형에서도 똑같이 발생
-	// 하며, 실수일 때 언더플로우가 발생하면 0이라는 값이 출력됩니다.
-#pragma endregion
-
-#pragma region 시프트 연산자
-	// 비트의 위치를 오른쪽 또는 왼쪽으로 특정한 수만틈,
-	// 이동시키는 연산자입니다.
-
-	// int x = 10;
-	// int y = 12;
-	// 
-	// printf("x의 값을 2번 왼쪽으로 이동한 결과 : %d\n", x << 2);
-	// printf("y의 값을 2번 오른쪽으로 이동한 결과 : %d\n", y >> 2);
-	
+	//// %c : 문자를 출력하기 위한 서식 지정자
+	//printf("alphabet 변수의 값 : %c\n", alphabet);
+	//// %d : 정수를 출력하기 위한 서식 지정자
+	//printf("integer 변수의 값 : %d\n", integer);
+	//// %f : 실수를 출력하기 위한 서식 지정자
+	//printf("decimal 변수의 값 : %f\n", decimal);
 
 #pragma endregion
 
-#pragma region 산술 연산자
+#pragma region 변수의 이름 규칙
 
-	// int result1 <- 변수 + 변수
-	// int result2 <- 리터럴 상수 - 변수
-	// int result3 <- 심볼릭 상수 * 리터럴 상수
-	// int result4 <- 리터럴 상수 / 리터럴 상수
-	// int result5 <- 심볼릭 상수 % 심볼릭 상수
+	// 1. 변수의 이름은 숫자로 시작할 수 없습니다.
+	// ex) int 5day;
 
-	// int data = 10; // 변수
-	// const int constant = 10; // 심볼릭 상수 ->const
-	// 
-	// int result1 = data + data;
-	// int result2 = 15 - data;
-	// int result3 = constant * 5;
-	// int result4 = 15 / 15;
-	// int result5 = constant % constant;
-	// 
-	// printf("result1 변수의 값: %d\n", result1);
-	// printf("result2 변수의 값: %d\n", result2);
-	// printf("result3 변수의 값: %d\n", result3);
-	// printf("result4 변수의 값: %d\n", result4);
-	// printf("result5 변수의 값: %d\n", result5);
+	// 2. 변수의 이름은 대소문자를 구분합니다.
+	// ex) int data = 100;
+	// ex) int DATA = 100;
 
+	// 3. 변수의 이름으로 예약어를 사용할 수 없습니다.
+	// ex) int int;
 
+	// 4. 변수의 이름으로 공백이 포함될 수 없습니다.
+	// ex) int count down;
+
+	// 5. 변수의 이름으로 특수 기호는 _와 $만 허용됩니다.
+	// ex) int Game_Academy;
+	// ex) int jump$up;
 
 
 #pragma endregion
 
-#pragma region 부호 없는 자료형
-	
-	// unsigned short mineral = 65535;
-	// 
-	// unsigned int gas = -1;
-	// 
-	// printf("mineral 변수의 값 : %u\n", mineral);
-	// 
-	// printf("gas 변수의 값 : %u\n", gas); 
-	// printf("gas 변수의 값 : %d\n", gas);
 
 
+	// 변수는 프로그램이 실행되는 동안 값을 바꿀 수 있으며,
+	// 원래 저장되어 있는 값은 새로 저장되는 값에 의해 지워집니다.
+#pragma endregion
 
+#pragma region 상수
+	// 프로그램이 실행되는 동안 더 이상 변경할 수 없는
+	// 메모리 공간입니다.
+
+	// const int value = 99;
+
+	// value = 45;
+
+
+	// 상수의 경우 메모리 공간을 가지고 있지 않은 상수를
+	// 리터럴 상수라고 하며, 메모리 공간을 가지고 있는 상수를
+	// 심볼릭 상수라고 합니다. (const 사용)
+
+
+	// 상수는 메모리 공간을 생성하는 동시에 초기화해야 하며,
+	// 한 번 저장된 값은 더 이상 변경할 수 없습니다.
 #pragma endregion
 
 
